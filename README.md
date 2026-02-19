@@ -6,14 +6,13 @@ Chat with any PDF document entirely on your local machine. No OpenAI, no cloud A
 
 ## ⚡ Stack
 
-| JS Original | Python Port |
-|---|---|
-| Next.js (frontend + API routes) | **FastAPI** (backend) + plain HTML/JS (frontend) |
-| LangChain.js / LangGraph.js | **LangChain Python** |
-| Transformers.js (Nomic embeddings in browser) | **sentence-transformers** (Nomic embed, same model family) |
-| Voy (WASM vector store in browser) | **FAISS** (in-memory vector store) |
-| Ollama JS client | **langchain-ollama** |
-| Web Worker (background thread) | **asyncio + thread pool** |
+ Python 
+**FastAPI** (backend) + plain HTML/JS (frontend) |
+**LangChain Python** |
+**sentence-transformers** (Nomic embed, same model family) |
+**FAISS** (in-memory vector store) |
+**langchain-ollama** |
+**asyncio + thread pool** |
 
 ---
 
@@ -58,27 +57,6 @@ uv run python run.py
 ```
 
 Open **http://localhost:8000** in your browser.
-
----
-
-## 🛠 Common uv Commands
-
-```bash
-# Add a new package
-uv pip install <package>
-
-# Sync dependencies from requirements.txt
-uv pip install -r requirements.txt
-
-# Run any script inside the venv without activating it
-uv run python run.py
-
-# Show installed packages
-uv pip list
-
-# Upgrade a package
-uv pip install --upgrade <package>
-```
 
 ---
 
@@ -207,8 +185,6 @@ pdf-chatbot-python/
 ```
 
 ---
-
-## 🔱 Differences from the JS Version
 
 - **No browser required** for inference — everything runs server-side.
 - **Persistent sessions** are held in memory (restart clears them; add Redis/DB for persistence).

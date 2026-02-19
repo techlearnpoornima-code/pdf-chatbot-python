@@ -1,0 +1,28 @@
+# Fully Local PDF Chatbot - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Web framework
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9          # for file uploads
+
+# LangChain core
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+langchain-ollama>=0.1.0          # Ollama integration
+
+# PDF loading¯
+pymupdf>=1.24.0                  # PyMuPDFLoader (fast & accurate)
+
+# Embeddings (mirrors Transformers.js nomic-embed-text in the browser)
+sentence-transformers>=3.0.0
+huggingface-hub>=0.23.0
+einops>=0.8.0
+
+# Vector store
+faiss-cpu>=1.8.0                 # in-memory vector similarity search
+
+# Utilities
+pydantic>=2.7.0
+python-dotenv>=1.0.0
